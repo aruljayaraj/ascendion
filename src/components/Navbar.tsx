@@ -43,6 +43,12 @@ export default function Example() {
       href: "/transaction-history",
       current: router.pathname === "/transaction-history",
     },
+    {
+      name: "Login",
+      href: "/login",
+      current: router.pathname === "/login",
+      classNames: "hidden sm:block",
+    },
   ];
 
   useEffect(() => {
@@ -168,14 +174,14 @@ export default function Example() {
               </>
             ) : (
               <>
-                <div>
+                <div className="hidden sm:block">
                   <input
                     placeholder="Search Document"
                     className="p-2 border rounded"
                     required
                   />
                 </div>
-                <Link href="/login">
+                <Link href="/login" className="hidden sm:block">
                   <span className="bg-white text-gray-900 px-3 py-1 rounded cursor-pointer">
                     Login
                   </span>
