@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
+import Button from "@/components/Button";
 
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -56,9 +57,9 @@ export default function Login() {
             className="p-2 border rounded"
             required
           />
-          <button className="bg-blue-600 text-white px-4 py-2 rounded">
+          <Button className="bg-blue-600 text-white px-4 py-2 ml-2 rounded">
             Next
-          </button>
+          </Button>
         </form>
       )}
 
@@ -76,9 +77,9 @@ export default function Login() {
               className="p-2 border rounded"
               required
             />
-            <button className="bg-blue-600 text-white px-4 py-2 rounded">
+            <Button className="bg-blue-600 text-white px-4 py-2 ml-2 rounded">
               Login
-            </button>
+            </Button>
           </form>
         </div>
       )}

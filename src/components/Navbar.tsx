@@ -47,7 +47,7 @@ export default function Example() {
       name: "Login",
       href: "/login",
       current: router.pathname === "/login",
-      classNames: "hidden sm:block",
+      classNames: "hidden md:hidden meow",
     },
   ];
 
@@ -125,9 +125,9 @@ export default function Example() {
                     aria-current={item.current ? "page" : undefined}
                     className={classNames(
                       item.current
-                        ? "bg-gray-900 text-white"
-                        : "text-gray-900 hover:bg-gray-700 hover:text-white",
-                      "rounded-md px-3 py-2 text-sm font-medium"
+                        ? `bg-gray-900 text-white `
+                        : `text-gray-900 hover:bg-gray-700 hover:text-white`,
+                      `rounded-md px-3 py-2 text-sm font-medium ${item.classNames}`
                     )}
                   >
                     {item.name}

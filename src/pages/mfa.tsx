@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
+import Button from "@/components/Button";
 
 export default function MFA() {
   const [code, setCode] = useState("");
@@ -31,9 +32,9 @@ export default function MFA() {
         className="p-2 border rounded"
         required
       />
-      <button className="bg-green-600 text-white px-4 py-2 rounded">
+      <Button className="bg-green-600 text-white px-4 py-2 ml-2 rounded">
         Verify
-      </button>
+      </Button>
     </form>
   );
 }
